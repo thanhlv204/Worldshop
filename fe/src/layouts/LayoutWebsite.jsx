@@ -18,7 +18,6 @@ const LayoutWebsite = () => {
               <img src="public/Meubel House_Logos-05.png" alt="Nhshop" />
               <p className="font-bold text-4xl font-montserrat">Furnio</p>
             </Link>
-
             <nav>
               <ul className=" flex justify-center space-x-5 *:font-medium">
                 <li className="hover:text-red-500 transition-colors duration-500">
@@ -35,24 +34,7 @@ const LayoutWebsite = () => {
                 </li>
               </ul>
             </nav>
-            <div className="space-x-3 flex justify-center ">
-              <Link
-                to=""
-                className=" hover:text-red-500 transition-colors duration-500"
-              >
-                <SignedOut>
-                  {/* Nút đăng nhập Clerk */}
-                  <SignInButton>
-                    <button className="hover:text-red-500 transition-colors duration-500">
-                      <AiOutlineUser />
-                    </button>
-                  </SignInButton>
-                </SignedOut>
-                <SignedIn>
-                  {/* Nút thông tin người dùng */}
-                  <UserButton />
-                </SignedIn>
-              </Link>
+            <div className="space-x-3 flex justify-center items-center">
               <Link
                 to="/search"
                 className=" hover:text-red-500 transition-colors duration-500"
@@ -70,6 +52,23 @@ const LayoutWebsite = () => {
                 className=" hover:text-red-500 transition-colors duration-500"
               >
                 <IoCartOutline />
+              </Link>
+              <Link
+                to=""
+                className=" hover:text-red-500 transition-colors duration-500"
+              >
+                <SignedOut>
+                  {/* Nút đăng nhập Clerk */}
+                  <SignInButton>
+                    <button className="hover:text-red-500 transition-colors duration-500">
+                      <AiOutlineUser />
+                    </button>
+                  </SignInButton>
+                </SignedOut>
+                <SignedIn>
+                  {/* Nút thông tin người dùng */}
+                  <UserButton />
+                </SignedIn>
               </Link>
             </div>
           </div>
