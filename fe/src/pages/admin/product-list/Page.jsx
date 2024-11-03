@@ -52,16 +52,16 @@ const ProductlistAdmin = () => {
   const columns = [
     {
       title: "Ảnh",
-      dataIndex: "imageUrls",
-      key: "imageUrls",
+      dataIndex: "imageUrl",
+      key: "imageUrl",
       render: (_, item) => {
         // console.log(item);
         return (
           <Space>
-            {item?.imageUrls?.length > 0 && (
+            {item?.imageUrl?.length > 0 && (
               <Image
-                key={item.imageUrls[0]} // lấy ảnh đầu tiên
-                src={item.imageUrls[0]}
+                key={item.imageUrl} // lấy ảnh đầu tiên
+                src={item.imageUrl}
                 width={70}
                 className="rounded border"
               />
@@ -135,7 +135,6 @@ const ProductlistAdmin = () => {
       ),
     },
   ];
-
   return (
     <>
       {contextHolder}

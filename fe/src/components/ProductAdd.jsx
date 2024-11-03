@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 
 const ProductAdd = () => {
   const nav = useNavigate();
-  const [imageUrls, setImageUrls] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
   const [form] = Form.useForm();
   const queryClient = useQueryClient();
   const [messageApi, contextHolder] = message.useMessage();
@@ -57,13 +57,13 @@ const ProductAdd = () => {
   const onHandleChange = (in4) => {
     // console.log("in4", in4);
     if (in4.file.status === "done") {
-      setImageUrls((prev) => [...prev, in4.file.response.secure_url]);
+      setImageUrl((prev) => [...prev, in4.file.response.secure_url]);
     }
   };
 
   const onFinish = (values) => {
-    if (!imageUrls) return;
-    mutate({ ...values, imageUrls });
+    if (!imageUrl) return;
+    mutate({ ...values, imageUrl });
   };
   return (
     <div>
@@ -80,7 +80,10 @@ const ProductAdd = () => {
         <Form.Item
           label="Tên sản phẩm"
           name="name"
-          rules={[{ required: true, message: "Đây là trường bắt buộc" }]}
+          rules={[
+            { required: true, message: "Đây là trường bắt buộc" },
+            { min: 3, message: "Không được nhập ít hơn 3 ký tự" },
+          ]}
         >
           <Input />
         </Form.Item>
@@ -146,10 +149,10 @@ const ProductAdd = () => {
         </Form.Item>
 
         <Form.Item label="Danh mục" name="category">
-          <Select>
-            <Select.Option value="idCategory1">Danh mục 1</Select.Option>
-            <Select.Option value="idCategory2">Danh mục 2</Select.Option>
-            <Select.Option value="idCategory3">Danh mục 3</Select.Option>
+          <Select placeholder="Chọn danh mục">
+            <Select.Option value="Danh mục 1"></Select.Option>
+            <Select.Option value="Danh mục 2"></Select.Option>
+            <Select.Option value="Danh mục 3"></Select.Option>
           </Select>
         </Form.Item>
 

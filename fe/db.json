@@ -1,55 +1,19 @@
 {
   "products": [
     {
-      "name": "anhthanhdeptraiupdate",
-      "price": 4444,
+      "name": "n1m23  ahihihi",
+      "price": 21321321,
+      "imageUrl": "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730539442/brurvmeukngh2jqkmj5e.jpg",
+      "id": 1
+    },
+    {
+      "name": "Áo Polo",
+      "price": 3000,
       "available": true,
       "type": "type1",
-      "category": "idCategory3",
-      "description": "12",
-      "imageUrls": [
-        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1728446794/phf5npzijkqaq0cwr1am.png",
-        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1728446800/tjtg6hiycphpasxihqfu.jpg"
-      ],
-      "id": 6
-    },
-    {
-      "name": "anhthanhdeptrai",
-      "price": 32,
-      "available": true,
-      "type": "type2",
-      "category": "idCategory2",
-      "imageUrls": [
-        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1728446949/w3nptigbfcobrldrxfil.jpg",
-        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1728446951/navcdgtez4ywvvnxxrnj.png"
-      ],
-      "id": 7
-    },
-    {
-      "name": "ád123",
-      "price": 123,
-      "imageUrls": [
-        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1728447223/htmhshfwd4hpqt6mi4o3.png"
-      ],
-      "id": 8
-    },
-    {
-      "name": "thanheqwe",
-      "price": 3333,
-      "imageUrls": [
-        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1728447407/htkwxnuc27lonpsaowqm.png",
-        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1728447409/xkzrostolckxrliihk5q.png",
-        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1728447411/ztkvxwgz1kjsg3d0d7fi.png"
-      ],
-      "id": 9
-    },
-    {
-      "name": "123",
-      "price": 123,
-      "imageUrls": [
-        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1728458165/vphjhqimb8ftvvs4usst.png"
-      ],
-      "id": 10
+      "category": "Danh mục 1",
+      "imageUrl": "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730605331/bsxvhsqfw4if2rbeg2sp.png",
+      "id": 2
     }
   ],
   "users": []

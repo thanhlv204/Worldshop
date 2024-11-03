@@ -20,14 +20,14 @@ import { useNavigate, useParams } from "react-router-dom";
 const ProductEdit = () => {
   const nav = useNavigate();
   const { id } = useParams();
-  const [imageUrls, setImageUrls] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
   const [form] = Form.useForm();
   const queryClient = useQueryClient();
   const [defaultFileList, setDefaultFileList] = useState([]);
   const [messageApi, contextHolder] = message.useMessage();
 
   const { data, isLoading } = useQuery({
-    queryKey: ["product", id],
+    queryKey: ["products", id],
     queryFn: async () => {
       const res = await axios.get(`http://localhost:3000/products/${id}`);
       return res.data;
@@ -35,15 +35,21 @@ const ProductEdit = () => {
   });
 
   useEffect(() => {
-    if (data?.imageUrls) {
-      setImageUrls(data.imageUrls);
+    if (data?.imageUrl) {
+      setImageUrl(data.imageUrl);
       setDefaultFileList(
-        data.imageUrls.map((url, index) => ({
-          uid: index,
-          name: `image-${index}`,
+        {
+          uid: "-1",
+          name: "image",
           status: "done",
-          url: url,
-        }))
+          url: data.imageUrl,
+        }
+        // data.imageUrl.map((url, index) => ({
+        //   uid: index,
+        //   name: `image-${index}`,
+        //   status: "done",
+        //   url: url,
+        // }))
       );
     }
   }, [data]);
@@ -85,13 +91,15 @@ const ProductEdit = () => {
   const onHandleChange = (in4) => {
     // console.log("in4", in4);
     if (in4.file.status === "done") {
-      setImageUrls((prev) => [...prev, in4.file.response.secure_url]);
+      setImageUrl(in4.file.response.secure_url);
     }
   };
 
   const onFinish = (values) => {
-    if (!imageUrls) return;
-    mutate({ ...values, imageUrls });
+    if (!imageUrl) return;
+    const imageSave = imageUrl.length > 0 ? imageUrl : defaultFileList;
+    // console.log(imageUrl);
+    mutate({ ...values, imageUrl: imageSave });
   };
 
   if (isLoading) return <Skeleton active />;
