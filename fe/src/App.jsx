@@ -9,10 +9,12 @@ import ProductAdd from "./components/ProductAdd";
 import ProductEdit from "./components/ProductEdit";
 import LayoutWebsite from "./layouts/LayoutWebsite";
 import HomePage from "./pages/website/home/Page";
-import LoginPage from "./pages/auth/login";
 import PageShop from "./pages/website/shop/PageShop";
 import AboutPage from "./pages/website/about/Page";
 import ContactPage from "./pages/website/contact/Page";
+import Singin from "./pages/auth/Singin";
+import Signup from "./pages/auth/Signup";
+import Private from "./components/Private";
 
 const App = () => {
   return (
@@ -20,12 +22,20 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LayoutWebsite />}>
           <Route index element={<HomePage />} />
-          <Route path="login" element={<LoginPage />} />
+          <Route path="login" element={<Singin />} />
+          <Route path="register" element={<Signup />} />
           <Route path="shop" element={<PageShop />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
         </Route>
-        <Route path="/admin" element={<LayoutAdmin />}>
+        <Route
+          path="/admin"
+          element={
+            <Private>
+              <LayoutAdmin />
+            </Private>
+          }
+        >
           <Route index element={<DashboardPage />} />
           <Route path="products" element={<ProductlistAdmin />} />
           <Route path="products/add" element={<ProductAdd />} />

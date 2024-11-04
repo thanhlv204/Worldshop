@@ -2,12 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 
 import { AiOutlineHeart, AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
 import { IoCartOutline } from "react-icons/io5";
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/clerk-react";
+
 const LayoutWebsite = () => {
   return (
     <>
@@ -54,21 +49,10 @@ const LayoutWebsite = () => {
                 <IoCartOutline />
               </Link>
               <Link
-                to=""
+                to="/withlist"
                 className=" hover:text-red-500 transition-colors duration-500"
               >
-                <SignedOut>
-                  {/* Nút đăng nhập Clerk */}
-                  <SignInButton>
-                    <button className="hover:text-red-500 transition-colors duration-500">
-                      <AiOutlineUser />
-                    </button>
-                  </SignInButton>
-                </SignedOut>
-                <SignedIn>
-                  {/* Nút thông tin người dùng */}
-                  <UserButton />
-                </SignedIn>
+                <AiOutlineUser />
               </Link>
             </div>
           </div>

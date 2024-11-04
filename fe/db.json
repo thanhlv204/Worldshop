@@ -16,5 +16,20 @@
       "id": 2
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$x4DiV0ZGERrtH101wNaA8eV.944LY3i6KVxips9SKSo6xQuhGAsPe",
+      "username": "admin@gmail.com",
+      "confirmPassword": "admin@gmail.com",
+      "id": 1
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "$2a$10$Y34THI5jrYcdOsCx6PlGguHAg4K.MehF9qJbmJ/4Q06GLjm9f6Mn2",
+      "username": "abc@gmail.com",
+      "confirmPassword": "abc@gmail.com",
+      "id": 2
+    }
+  ]
 }
