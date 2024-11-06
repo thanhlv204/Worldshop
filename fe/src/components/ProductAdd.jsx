@@ -57,7 +57,7 @@ const ProductAdd = () => {
   const onHandleChange = (in4) => {
     // console.log("in4", in4);
     if (in4.file.status === "done") {
-      setImageUrl((prev) => [...prev, in4.file.response.secure_url]);
+      setImageUrl(in4.file.response.secure_url);
     }
   };
 
@@ -150,9 +150,9 @@ const ProductAdd = () => {
 
         <Form.Item label="Danh mục" name="category">
           <Select placeholder="Chọn danh mục">
-            <Select.Option value="Danh mục 1"></Select.Option>
-            <Select.Option value="Danh mục 2"></Select.Option>
-            <Select.Option value="Danh mục 3"></Select.Option>
+            <Select.Option value="Áo "></Select.Option>
+            <Select.Option value="Quần"></Select.Option>
+            <Select.Option value="Phụ kiện"></Select.Option>
           </Select>
         </Form.Item>
 

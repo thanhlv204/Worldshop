@@ -19,9 +19,10 @@ const ProductlistAdmin = () => {
     queryKey: ["products"],
     queryFn: async () => {
       const res = await axios.get(`http://localhost:3000/products`);
-      return res.data.map((product) => ({
+      return res.data.map((product, index) => ({
         key: product.id,
         ...product,
+        customId: index + 1,
       }));
     },
   });
@@ -50,6 +51,11 @@ const ProductlistAdmin = () => {
   };
 
   const columns = [
+    {
+      title: "ID",
+      dataIndex: "customId",
+      key: "customId",
+    },
     {
       title: "Ảnh",
       dataIndex: "imageUrl",

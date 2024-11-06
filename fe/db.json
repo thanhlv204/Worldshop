@@ -1,19 +1,119 @@
 {
   "products": [
     {
-      "name": "n1m23  ahihihi",
-      "price": 21321321,
-      "imageUrl": "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730539442/brurvmeukngh2jqkmj5e.jpg",
-      "id": 1
+      "name": "Áo phông nam 1",
+      "price": 200000,
+      "available": true,
+      "type": "type2",
+      "category": "Áo ",
+      "description": "Áo phông nam chất liệu cotton mềm mại.",
+      "imageUrl": "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730885499/a2rn25m1nivs4gkzaihm.webp",
+      "id": 3
     },
     {
-      "name": "Áo Polo",
-      "price": 3000,
+      "name": "Áo phông unisex",
+      "price": 240000,
       "available": true,
+      "type": "type2",
+      "category": "Áo ",
+      "description": "Áo phông unisex phù hợp cho cả nam và nữ.",
+      "imageUrl": [
+        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730885605/wbaseay6vckydgoqguxw.webp"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Áo phông nam 2",
+      "price": 230000,
       "type": "type1",
-      "category": "Danh mục 1",
-      "imageUrl": "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730605331/bsxvhsqfw4if2rbeg2sp.png",
-      "id": 2
+      "category": "Áo ",
+      "description": "Áo phông nam phong cách năng động.",
+      "imageUrl": [
+        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730885648/lhhah8mscogpnybaj6yu.webp"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Quần jean nam 1",
+      "price": 310000,
+      "type": "type1",
+      "category": "Quần",
+      "description": "Quần jean nam với form dáng thoải mái.",
+      "imageUrl": [
+        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730885722/cbop2puq4oujow1sjupj.webp"
+      ],
+      "id": 7
+    },
+    {
+      "name": "Quần short nam",
+      "price": 250000,
+      "available": true,
+      "type": "type2",
+      "category": "Quần",
+      "description": "Quần short nam thích hợp cho mùa hè.",
+      "imageUrl": [
+        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730885764/yrzwxpejo5mvg8eaplkm.webp"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Quần kaki nam",
+      "price": 270000,
+      "type": "type1",
+      "category": "Quần",
+      "description": "Quần kaki nam phong cách lịch sự.",
+      "imageUrl": [
+        "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730885796/aagnaqsipoxzjcfmqk2n.webp"
+      ],
+      "id": 9
+    },
+    {
+      "name": "Quần short nam",
+      "price": 260000,
+      "available": true,
+      "type": "type2",
+      "category": "Quần",
+      "description": "Quần short nam thoải mái, thời trang.",
+      "imageUrl": "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730885882/qplcagqmts3nz8imthwd.webp",
+      "id": 10
+    },
+    {
+      "name": "Mũ lưỡi trai",
+      "price": 100000,
+      "available": true,
+      "type": "type2",
+      "category": "Phụ kiện",
+      "description": "Mũ lưỡi trai thời trang.",
+      "imageUrl": "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730886380/ibhd5tp4and7ykgls3pr.webp",
+      "id": 11
+    },
+    {
+      "name": "Thắt lưng da",
+      "price": 200000,
+      "available": true,
+      "type": "type2",
+      "category": "Phụ kiện",
+      "description": "Thắt lưng da cao cấp.",
+      "imageUrl": "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730887107/iaxteezojdqimgknyo4f.jpg",
+      "id": 13
+    },
+    {
+      "name": "Balo du lịch",
+      "price": 300000,
+      "type": "type1",
+      "category": "Phụ kiện",
+      "description": "Balo du lịch tiện dụng.",
+      "imageUrl": "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730887196/csfmcrmjmj3sclnjhmbx.jpg",
+      "id": 14
+    },
+    {
+      "name": "Kính râm",
+      "price": 150000,
+      "type": "type1",
+      "category": "Phụ kiện",
+      "description": "Kính râm bảo vệ mắt.",
+      "imageUrl": "https://res.cloudinary.com/dp0sdchpp/image/upload/v1730887587/xloxqhvdwacilcnzymve.jpg",
+      "id": 15
     }
   ],
   "users": [

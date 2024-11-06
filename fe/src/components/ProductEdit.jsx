@@ -37,20 +37,12 @@ const ProductEdit = () => {
   useEffect(() => {
     if (data?.imageUrl) {
       setImageUrl(data.imageUrl);
-      setDefaultFileList(
-        {
-          uid: "-1",
-          name: "image",
-          status: "done",
-          url: data.imageUrl,
-        }
-        // data.imageUrl.map((url, index) => ({
-        //   uid: index,
-        //   name: `image-${index}`,
-        //   status: "done",
-        //   url: url,
-        // }))
-      );
+      setDefaultFileList({
+        uid: "-1",
+        name: "image",
+        status: "done",
+        url: data.imageUrl,
+      });
     }
   }, [data]);
 
