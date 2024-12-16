@@ -10,7 +10,7 @@ const Signin = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const { mutate, isPending } = useMutation({
     mutationFn: async (data) => {
-      return await axios.post(`http://localhost:3000/signin`, data);
+      return await axios.post(`http://localhost:8080/api/auth/sign-in`, data);
     },
     onSuccess: (data) => {
       //reset form
@@ -19,7 +19,11 @@ const Signin = () => {
         type: "success",
         content: "Đăng nhập thành công!",
       });
-      localStorage.setItem("user", JSON.stringify(data.data.user.id));
+      localStorage.setItem(
+        "accessToken",
+        JSON.stringify(data.data.accessToken)
+      );
+      localStorage.setItem("user", JSON.stringify(data.data.user));
       queryClient.invalidateQueries({
         queryKey: ["users"],
       });
@@ -39,7 +43,7 @@ const Signin = () => {
     mutate({ ...values });
   };
   return (
-    <div>
+    <div className="a-auto w-100">
       {contextHolder}
       <Form
         name="basic"

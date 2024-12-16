@@ -10,7 +10,7 @@ const Signup = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const { mutate, isPending } = useMutation({
     mutationFn: async (data) => {
-      return await axios.post(`http://localhost:3000/signup`, data);
+      return await axios.post(`http://localhost:8080/api/auth/sign-up`, data);
     },
     onSuccess: () => {
       //reset form
@@ -49,22 +49,6 @@ const Signup = () => {
         onFinish={onFinish}
         disabled={isPending}
       >
-        <Form.Item
-          label="Username"
-          name="username"
-          rules={[
-            {
-              required: true,
-              message: "Please input your username!",
-            },
-            {
-              min: 6,
-              message: "Username not less than 6 characters!",
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
         <Form.Item
           label="Email"
           name="email"

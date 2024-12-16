@@ -1,20 +1,19 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
 import { Route, Routes } from "react-router-dom";
-import LayoutAdmin from "./layouts/LayoutAdmin";
-import NotFoundPage from "./pages/website/404/Page";
-import DashboardPage from "./pages/admin/Page";
-import ProductlistAdmin from "./pages/admin/product-list/Page";
-import ProductAdd from "./components/ProductAdd";
-import ProductEdit from "./components/ProductEdit";
-import LayoutWebsite from "./layouts/LayoutWebsite";
+import LayoutAdmin from "./layouts/layoutAdmin";
+import LayoutWebsite from "./layouts/layoutWebsite";
 import HomePage from "./pages/website/home/Page";
 import PageShop from "./pages/website/shop/PageShop";
 import AboutPage from "./pages/website/about/Page";
 import ContactPage from "./pages/website/contact/Page";
-import Singin from "./pages/auth/Singin";
-import Signup from "./pages/auth/Signup";
-import Private from "./components/Private";
+import Signup from "./pages/auth/signup";
+import Signin from "./pages/auth/singin";
+import Private from "./components/private";
+import ProductlistAdmin from "./pages/admin/product-list/Page";
+import ProductAdd from "./components/ProductAdd";
+import NotFoundPage from "./pages/website/404/Page";
+import ProductEdit from "./components/ProductEdit";
+import DashboardPage from "./pages/admin/Page";
+import ProductDetail from "./pages/website/shop/product-detail/page";
 
 const App = () => {
   return (
@@ -22,11 +21,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LayoutWebsite />}>
           <Route index element={<HomePage />} />
-          <Route path="login" element={<Singin />} />
+          <Route path="login" element={<Signin />} />
           <Route path="register" element={<Signup />} />
           <Route path="shop" element={<PageShop />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="shop/:id" element={<ProductDetail />} />
         </Route>
         <Route
           path="/admin"

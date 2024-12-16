@@ -1,21 +1,27 @@
 /* eslint-disable react/prop-types */
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
+import { useEffect, useRef } from "react";
 
 const Private = ({ children }) => {
   const nav = useNavigate();
-  const user = JSON.parse(localStorage.getItem("user") || "null");
-
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  const hasRedirected = useRef(false);
   useEffect(() => {
-    if (!user || user !== 1) {
-      message.destroy();
-      message.error("Bạn không có quyền truy câp vào trang này!");
-      nav("/");
+    if (!user || user.role !== 1) {
+      if (!hasRedirected.current) {
+        message.error("Bạn không có quyền truy câp vào trang này!", 2);
+        nav("/");
+        hasRedirected.current = true;
+      }
     }
   }, [user, nav]);
 
-  return user && user === 1 ? children : null;
+  if (!user || user.role !== 1) {
+    return null;
+  }
+
+  return children;
 };
 
 export default Private;
